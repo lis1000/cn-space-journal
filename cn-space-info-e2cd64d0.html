@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日常参考 · 500彩票网官方</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #fafaf8;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            color: #2b2b2b;
+            line-height: 1.75;
+            padding: 2.5rem 1.25rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page {
+            max-width: 680px;
+            width: 100%;
+        }
+
+        /* 开篇短句 — 留白 + 轻声 */
+        .opening {
+            font-size: 1.5rem;
+            font-weight: 350;
+            letter-spacing: -0.02em;
+            color: #3b3b3a;
+            margin-top: 0.8rem;
+            margin-bottom: 2.8rem;
+            border-left: 3px solid #d0d0cb;
+            padding-left: 1.25rem;
+            line-height: 1.4;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 440;
+            letter-spacing: -0.02em;
+            margin-bottom: 2rem;
+            color: #1f1f1e;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            font-weight: 430;
+            margin: 2.4rem 0 0.9rem 0;
+            color: #2f2f2e;
+            border-bottom: 1px solid #e2e2dd;
+            padding-bottom: 0.3rem;
+        }
+
+        p {
+            margin-bottom: 1.4rem;
+            font-size: 1rem;
+            color: #3d3d3c;
+        }
+
+        /* 承接段落 — 自然融入链接 */
+        .bridge {
+            background: #f4f4f1;
+            padding: 1.4rem 1.6rem;
+            border-radius: 16px;
+            margin: 1.8rem 0 2rem 0;
+            font-size: 1rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+        }
+
+        a {
+            color: #1f5a4b;
+            text-decoration: none;
+            border-bottom: 1px solid #c3d0ca;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        a:hover {
+            color: #0f3d32;
+            border-bottom-color: #1f5a4b;
+        }
+
+        /* 特点列表 — 极简卡片 */
+        .feature-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 0.9rem;
+            margin: 1.8rem 0 2.2rem 0;
+        }
+
+        .feature-item {
+            background: #ffffff;
+            border: 1px solid #eaeae5;
+            border-radius: 14px;
+            padding: 1rem 1.4rem;
+            transition: background 0.15s;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+
+        .feature-item:hover {
+            background: #f7f7f4;
+        }
+
+        .feature-marker {
+            font-size: 1.1rem;
+            color: #74857b;
+            flex-shrink: 0;
+            line-height: 1.6;
+        }
+
+        .feature-text {
+            font-size: 0.98rem;
+            color: #3b3b3a;
+        }
+
+        .feature-text strong {
+            font-weight: 500;
+            color: #1f3f35;
+        }
+
+        /* 场景与提示段落 */
+        .scene-note {
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 1.6rem 1.6rem 1.2rem 1.6rem;
+            margin: 2rem 0;
+            border: 1px solid #e6e6e1;
+        }
+
+        .scene-note p:last-child {
+            margin-bottom: 0;
+        }
+
+        .label {
+            font-size: 0.8rem;
+            letter-spacing: 0.04em;
+            color: #8a8a84;
+            text-transform: uppercase;
+            margin-bottom: 0.3rem;
+            display: block;
+        }
+
+        .faq-mini {
+            margin: 2.2rem 0 2rem 0;
+        }
+
+        .faq-mini details {
+            margin-bottom: 0.75rem;
+            border-bottom: 1px solid #ecece7;
+            padding-bottom: 0.65rem;
+        }
+
+        .faq-mini summary {
+            font-weight: 430;
+            color: #2e4a3f;
+            cursor: pointer;
+            padding: 0.2rem 0;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .faq-mini summary::before {
+            content: "›";
+            font-size: 1.3rem;
+            color: #8f9f95;
+            line-height: 1;
+        }
+
+        .faq-mini details[open] summary::before {
+            content: "∨";
+        }
+
+        .faq-mini .answer {
+            color: #444443;
+            padding: 0.4rem 0 0.2rem 1.2rem;
+            font-size: 0.96rem;
+        }
+
+        .gentle-closing {
+            margin-top: 2.8rem;
+            padding-top: 1.6rem;
+            border-top: 1px solid #deded9;
+            font-size: 0.96rem;
+            color: #5d5d59;
+            text-align: center;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #ecece7;
+            margin: 1.8rem 0;
+        }
+
+        @media (max-width: 500px) {
+            body {
+                padding: 1.5rem 1rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            .opening {
+                font-size: 1.25rem;
+                padding-left: 1rem;
+            }
+            .bridge {
+                padding: 1.2rem 1.2rem;
+            }
+            .feature-item {
+                padding: 0.85rem 1.1rem;
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: #1c1c1a;
+                color: #dcdcd8;
+            }
+            h1, h2, p, .feature-text, .gentle-closing {
+                color: #d0d0cc;
+            }
+            .opening {
+                color: #c8c8c4;
+                border-left-color: #5a6b60;
+            }
+            .bridge {
+                background: #262624;
+            }
+            .feature-item {
+                background: #232321;
+                border-color: #3a3a36;
+            }
+            .feature-item:hover {
+                background: #2b2b28;
+            }
+            .scene-note {
+                background: #232321;
+                border-color: #3a3a36;
+            }
+            a {
+                color: #9dbeb0;
+                border-bottom-color: #4c6b5d;
+            }
+            a:hover {
+                color: #c0ddd0;
+            }
+            .faq-mini summary {
+                color: #b8cfc2;
+            }
+            .faq-mini .answer {
+                color: #bcbcb7;
+            }
+            .faq-mini details {
+                border-bottom-color: #3a3a36;
+            }
+            .label {
+                color: #898983;
+            }
+            .gentle-closing {
+                border-top-color: #3a3a36;
+            }
+            hr {
+                border-top-color: #3a3a36;
+            }
+            h2 {
+                border-bottom-color: #3b3b37;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <!-- 开篇短句：轻声引入 -->
+        <div class="opening">
+            有时只是随手翻翻，看看数字，想想概率。<br>
+            一种对照，也是一种延伸。
+        </div>
+
+        <h1>日常查询 · 对照与延伸</h1>
+
+        <!-- 承接段落：从日常视角展开，自然嵌入链接 -->
+        <p>
+            很多人习惯在空闲时打开一个页面，不是为了追涨或押注，而是想了解近期的趋势、参考一些公开的历史分布。保持对信息的熟悉，本身就是一种平和的态度。如果你也在寻找一个能够快速查阅、数据相对清晰的参考点，<a href="https://cn-space-500.com">500彩票网官方</a>提供了比较完整的数字列表和历史记录，适合作为日常对照的工具。
+        </p>
+
+        <!-- 特点列表：轻量卡片 -->
+        <h2>日常使用中比较在意的几个特点</h2>
+        <div class="feature-grid">
+            <div class="feature-item">
+                <span class="feature-marker">⏳</span>
+                <div class="feature-text"><strong>历史记录清晰</strong> —— 过去一段时间的数据按日期排列，浏览时不用来回切换，适合快速回溯。</div>
+            </div>
+            <div class="feature-item">
+                <span class="feature-marker">📋</span>
+                <div class="feature-text"><strong>分类对照</strong> —— 不同玩法的数据分开呈现，方便横向比较，不会混淆在一起。</div>
+            </div>
+            <div class="feature-item">
+                <span class="feature-marker">🔍</span>
+                <div class="feature-text"><strong>延伸阅读区</strong> —— 除了数字本身，还有一些基础说明和常见概念，适合想多了解一点背景的人。</div>
+            </div>
+            <div class="feature-item">
+                <span class="feature-marker">🧘</span>
+                <div class="feature-text"><strong>界面不杂乱</strong> —— 没有过多的弹窗和闪烁广告，阅读体验比较安静，适合慢慢看。</div>
+            </div>
+        </div>
+
+        <!-- 场景 + 提示：融合叙述 -->
+        <div class="scene-note">
+            <span class="label">一个常见的场景</span>
+            <p>晚上打开电脑，把最近一周的数字和上个月放在一起扫一眼。有时候会发现某些数字的间隔在拉长，有时候连续几期都集中在某个区间。这种观察并不代表什么必然规律，但能让人心里有个印象。把<a href="https://cn-space-500.com">500彩票网官方</a>放在书签里，需要对照的时候，两三下就能翻到想要的部分。</p>
+            <p style="margin-top: 0.6rem; font-size: 0.95rem; color: #6b6b66;">提示：任何历史数据仅供延伸参考，不构成预判依据。保持轻松心态，把它当作一种数字浏览习惯即可。</p>
+        </div>
+
+        <!-- FAQ 摘要：简短的常见疑问 -->
+        <h2>偶尔会遇到的几个疑问</h2>
+        <div class="faq-mini">
+            <details>
+                <summary>历史数据一般保留多久？</summary>
+                <div class="answer">通常在页面中能看到近几个月到一年的记录，具体范围视不同分类有所差异。如果需要更早的存档，可以留意页面底部的归档链接。</div>
+            </details>
+            <details>
+                <summary>页面上的数字是实时更新的吗？</summary>
+                <div class="answer">基本在结果公布后不久就会同步，日常查询时看到的都是已经发布的正式数据。不过极端情况下可能会有几分钟延迟，以官方发布为准。</div>
+            </details>
+            <details>
+                <summary>能不能只靠这些数据做判断？</summary>
+                <div class="answer">数据只是参考的一部分。每个数字的出现都是独立事件，延伸阅读的意义在于了解背景，而不是用来预测。保持理性，把查询当作一种信息浏览就好。</div>
+            </details>
+        </div>
+
+        <hr>
+
+        <!-- 温和结尾 -->
+        <div class="gentle-closing">
+            无论是随手翻看，还是仔细对照，<br>
+            数字本身只是数字，重要的是保持自己的节奏。
+        </div>
+    </div>
+</body>
+</html>
